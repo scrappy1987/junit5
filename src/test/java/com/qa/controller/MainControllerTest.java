@@ -23,7 +23,7 @@ public class MainControllerTest {
 
     @Test
     public void getHello() throws Exception {
-        ResponseEntity<String> response = restTemplate.getForEntity(new URL("http://localhost:" + port + "/").toString(), String.class);
+        ResponseEntity<String> response = restTemplate.getForEntity(new URL("http://localhost:" + port + "/hello").toString(), String.class);
         assertEquals("Hello from repo", response.getBody());
     }
 
